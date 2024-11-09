@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs
 
 
 result = []
-r = requests.get("http://ketqua2.net")
+r = requests.get("https://ketqua04.net")
 tree = bs(markup=r.text, features='html.parser')
 nodes = tree.find_all(name='td', attrs={'class': 'chu17 need_blank'})
 
@@ -13,9 +13,9 @@ for node in nodes:
 
 def check(number):
 	if str(number) in result:
-		return "Xin chúc mừng, bạn đã trúng lô"
+		return "Xin chúc mừng, bạn đã trúng loto"
 	else:
-		return "Tạch lô, chúc bạn may mắn lần sau"
+		return "Chúc bạn may mắn lần sau"
 
 
 def main():
